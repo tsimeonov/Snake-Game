@@ -48,3 +48,8 @@ body,
 	padding: 30px;
 	margin: 0;
 }
+
+#scores {
+	display: flex;
+	justify-content: space-between;
+}
