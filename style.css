@@ -49,7 +49,7 @@ body,
 	margin: 0;
 }
 
-#scores {
+.scores {
 	display: flex;
 	justify-content: space-between;
 }
