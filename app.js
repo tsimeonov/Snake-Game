@@ -38,4 +38,9 @@ function setPosition(element, position) {
 
 // Testing draw function
 
-draw();
+// draw();
+
+function drawFood() {
+	const foodElement = createGameElement('div', 'food');
+	setPosition(foodElement, food);
+}
