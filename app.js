@@ -45,3 +45,5 @@ function drawFood() {
 	const foodElement = createGameElement('div', 'food');
 	setPosition(foodElement, food);
 }
+
+function generateFood() {}
