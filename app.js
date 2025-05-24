@@ -5,6 +5,7 @@ const board = document.getElementById('game-board');
 // Define game variables
 
 let snake = [{ x: 10, y: 10 }];
+let food = generateFood();
 
 // Draw game map, snake, food
 function draw() {
