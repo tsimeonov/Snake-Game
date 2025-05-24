@@ -57,3 +57,10 @@ body,
 #score {
 	color: #abb78a;
 }
+
+#score,
+#highScore {
+	font-size: 40px;
+	font-weight: bolder;
+	margin: 10px 0;
+}
