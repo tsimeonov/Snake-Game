@@ -78,11 +78,17 @@ function move() {
 
 	snake.unshift(head);
 
-	snake.pop();
+	// snake.pop();
+
+	if (head.x === food.x && heady === food.y) {
+		food = generateFood();
+		clearInterval(); // Clear past interval
+		gameInterval();
+	}
 }
 
 // Test moving
-setInterval(() => {
-	move(); // Move firstr
-	draw(); // Then draw again new position
-}, 200);
+// setInterval(() => {
+// 	move(); // Move firstr
+// 	draw(); // Then draw again new position
+// }, 200);
