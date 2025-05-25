@@ -7,6 +7,8 @@ const gridSize = 20;
 let snake = [{ x: 10, y: 10 }];
 let food = generateFood();
 let direction = 'right';
+let gameInterval;
+let gameSpeedDelay = 200;
 
 // Draw game map, snake, food
 function draw() {
@@ -83,7 +85,12 @@ function move() {
 	if (head.x === food.x && heady === food.y) {
 		food = generateFood();
 		clearInterval(); // Clear past interval
-		gameInterval();
+		gameInterval = setInterval(() => {
+			move();
+			draw();
+		}, gameSpeedDelat);
+	} else {
+		snake.pop();
 	}
 }
 
