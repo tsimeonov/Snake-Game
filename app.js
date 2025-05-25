@@ -62,11 +62,19 @@ function generateFood() {
 function move() {
 	const head = { ...snake[0] };
 	switch (direction) {
+		case 'up':
+			head.y--;
+			break;
+		case 'down':
+			head.y++;
+			break;
+		case 'left':
+			head.x--;
+			break;
 		case 'right':
 			head.x++;
 			break;
-
-		default:
-			break;
 	}
+
+	snake.unshift(head);
 }
