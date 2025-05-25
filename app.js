@@ -77,4 +77,12 @@ function move() {
 	}
 
 	snake.unshift(head);
+
+	snake.pop();
 }
+
+// Test moving
+setInterval(() => {
+	move(); // Move firstr
+	draw(); // Then draw again new position
+}, 200);
