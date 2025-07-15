@@ -8,6 +8,7 @@ let snake = [{ x: 10, y: 10 }];
 let food = generateFood();
 let direction = 'right';
 let gameInterval;
+let gameSpeedDelay = 200;
 
 // Draw game map, snale food
 function draw() {
