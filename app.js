@@ -82,9 +82,11 @@ function move() {
 
 	if (head.x === food.x && head.y === food.y) {
 		food = generateFood();
-		clearInterval(); // Clear past interval
+		increaseSpeed();
+		clearInterval(gameInterval); // Clear past interval
 		gameInterval = setInterval(() => {
 			move();
+			// checkCollision();
 			draw();
 		}, gameSpeedDelay);
 	} else {
@@ -137,3 +139,10 @@ function handleKeyPresss(event) {
 }
 
 document.addEventListener('keydown', handleKeyPresss);
+
+function increaseSpeed() {
+	// console.log(gameSpeedDelay);
+	if (gameSpeedDelay > 150) {
+		gameSpeedDelay -= 5;
+	}
+}
