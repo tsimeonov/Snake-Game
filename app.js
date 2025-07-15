@@ -84,6 +84,8 @@ function move() {
 			move();
 			draw();
 		}, gameSpeedDelay);
+	} else {
+		snake.pop();
 	}
 }
 
