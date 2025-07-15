@@ -101,4 +101,11 @@ function move() {
 // Start game function
 function startGame() {
 	gameStarted = true; // Keep track of a running game
+	instructionText.style.display = 'none';
+	logo.style.display = 'none';
+	gameInterval = setInterval(() => {
+		move();
+		// checkCollision();
+		draw();
+	}, gameSpeedDelay());
 }
