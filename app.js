@@ -1,6 +1,7 @@
 // Define HTML elements
 
 const board = document.getElementById('game-board');
+const instructionText = document.getElementById('instruction-text');
 
 // Define game variables
 const gridSize = 20;
@@ -9,6 +10,7 @@ let food = generateFood();
 let direction = 'right';
 let gameInterval;
 let gameSpeedDelay = 200;
+let gameStarted = false;
 
 // Draw game map, snale food
 function draw() {
@@ -94,3 +96,8 @@ function move() {
 // 	move(); // Move first
 // 	draw(); // Then draw again new position
 // }, 200);
+
+// Start game function
+function startGame() {
+	gameStarted = true; // Keep track of a running game
+}
