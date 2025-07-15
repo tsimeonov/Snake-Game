@@ -2,6 +2,7 @@
 
 const board = document.getElementById('game-board');
 const instructionText = document.getElementById('instruction-text');
+const logo = document.getElementById('logo');
 
 // Define game variables
 const gridSize = 20;
