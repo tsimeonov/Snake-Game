@@ -107,7 +107,7 @@ function startGame() {
 		move();
 		// checkCollision();
 		draw();
-	}, gameSpeedDelay());
+	}, gameSpeedDelay);
 }
 
 // Keypress event listener
@@ -135,3 +135,5 @@ function handleKeyPresss(event) {
 		}
 	}
 }
+
+document.addEventListener('keydown', handleKeyPresss);
