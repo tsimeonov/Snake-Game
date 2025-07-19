@@ -170,6 +170,8 @@ function checkCollision() {
 }
 
 function resetGame() {
+	updateScore();
+	stopGame();
 	snake = [{ x: 10, y: 10 }];
 	food = generateFood();
 	direction = 'right';
