@@ -173,7 +173,7 @@ function checkCollision() {
 }
 
 function resetGame() {
-	updateScore();
+	updateHighScore();
 	stopGame();
 	snake = [{ x: 10, y: 10 }];
 	food = generateFood();
@@ -200,6 +200,6 @@ function updateHighScore() {
 	if (currentScore > highScore) {
 		highScore = currentScore;
 		highScoreText.textContent = highScore.toString().padStart(3, '0');
-		highScore.style.display = 'block';
+		highScoreText.style.display = 'block';
 	}
 }
