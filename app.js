@@ -86,7 +86,7 @@ function move() {
 		clearInterval(gameInterval); // Clear past interval
 		gameInterval = setInterval(() => {
 			move();
-			// checkCollision();
+			checkCollision();
 			draw();
 		}, gameSpeedDelay);
 	} else {
@@ -107,7 +107,7 @@ function startGame() {
 	logo.style.display = 'none';
 	gameInterval = setInterval(() => {
 		move();
-		// checkCollision();
+		checkCollision();
 		draw();
 	}, gameSpeedDelay);
 }
@@ -165,4 +165,13 @@ function checkCollision() {
 			resetGame();
 		}
 	}
+}
+
+function resetGame() {
+	snake = [{ x: 10, y: 10 }];
+	food = generateFood();
+	direction = 'right';
+	gameSpeedDelay = 200;
+
+	updateScore();
 }
