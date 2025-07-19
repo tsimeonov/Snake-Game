@@ -184,3 +184,10 @@ function updateScore() {
 	const currentScore = snake.length - 1;
 	score.textContent = currentScore.toString().padStart(3, '0');
 }
+
+function stopGame() {
+	clearInterval(gameInterval);
+	gameStarted = false;
+	instructionText.style.display = 'block';
+	logo.style.display = 'block';
+}
