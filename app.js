@@ -19,6 +19,7 @@ function draw() {
 	board.innerHTML = '';
 	drawSnake();
 	drawFood();
+	updateScore();
 }
 
 // Draw snake
